@@ -1,4 +1,4 @@
-SEO / INDEXING SETUP
+SEO / INDEXING SETUP — FINAL V3
 Domain: https://elsaeedwinch.com
 
 Public pages in sitemap:
@@ -12,15 +12,18 @@ Excluded from indexing:
 - thank-you.html
 
 Technical setup:
-- Canonical URLs use the apex domain (https://elsaeedwinch.com).
-- robots.txt points to the sitemap.
+- Canonical URLs use the apex HTTPS domain.
+- robots.txt allows crawling and points to the sitemap.
 - sitemap.xml includes only public pages.
 - Open Graph / Twitter metadata added.
-- AutomotiveBusiness structured data added to the homepage.
-- Placeholder text and generic image alt text cleaned up.
+- WebSite + AutomotiveBusiness structured data added to the homepage.
+- BreadcrumbList structured data added to inner public pages.
+- Image alt text, lazy loading, and safe external-link attributes reviewed.
+- No Google Ads/Analytics placeholder ID is activated.
 
 After deployment:
 1. Verify https://elsaeedwinch.com/ works.
-2. In Google Search Console, keep https://elsaeedwinch.com/sitemap.xml submitted.
-3. Inspect https://elsaeedwinch.com/ and request indexing after the new deployment is live.
-4. Do not submit individual HTML pages as sitemaps.
+2. Verify https://elsaeedwinch.com/robots.txt and https://elsaeedwinch.com/sitemap.xml.
+3. In Google Search Console, keep https://elsaeedwinch.com/sitemap.xml submitted.
+4. Inspect https://elsaeedwinch.com/ and request indexing after the new deployment is live.
+5. Inspect the public inner pages individually if needed; do not submit individual HTML URLs as sitemaps.
