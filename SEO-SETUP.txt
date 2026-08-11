@@ -1,0 +1,16 @@
+تم تجهيز الموقع لدومين elsaeedwinch.com:
+- robots.txt + sitemap.xml بالدومين الحقيقي
+- CNAME لـ GitHub Pages
+- Canonical و Open Graph بروابط HTTPS مطلقة
+- Meta Robots
+- LocalBusiness Schema
+- تحسين alt للصور
+- thank-you و privacy-policy: noindex
+
+قبل التشغيل:
+1) في GitHub Pages فعّل Custom domain واكتب: elsaeedwinch.com
+2) في Namecheap اترك A records الأربعة الخاصة بـ GitHub Pages و CNAME الخاص بـ www كما هي.
+3) احذف URL Redirect Record للـ @ لأنه يتعارض مع A records الخاصة بـ GitHub Pages.
+4) فعّل HTTPS في GitHub Pages بعد انتشار الدومين.
+5) في Google Search Console أضف https://elsaeedwinch.com ثم أرسل: https://elsaeedwinch.com/sitemap.xml
+6) اطلب فهرسة الصفحة الرئيسية والصفحات المهمة من URL Inspection.
