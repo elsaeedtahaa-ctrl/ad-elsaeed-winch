@@ -1,16 +1,26 @@
-تم تجهيز الموقع لدومين elsaeedwinch.com:
-- robots.txt + sitemap.xml بالدومين الحقيقي
-- CNAME لـ GitHub Pages
-- Canonical و Open Graph بروابط HTTPS مطلقة
-- Meta Robots
-- LocalBusiness Schema
-- تحسين alt للصور
-- thank-you و privacy-policy: noindex
+SEO / INDEXING SETUP
+Domain: https://elsaeedwinch.com
 
-قبل التشغيل:
-1) في GitHub Pages فعّل Custom domain واكتب: elsaeedwinch.com
-2) في Namecheap اترك A records الأربعة الخاصة بـ GitHub Pages و CNAME الخاص بـ www كما هي.
-3) احذف URL Redirect Record للـ @ لأنه يتعارض مع A records الخاصة بـ GitHub Pages.
-4) فعّل HTTPS في GitHub Pages بعد انتشار الدومين.
-5) في Google Search Console أضف https://elsaeedwinch.com ثم أرسل: https://elsaeedwinch.com/sitemap.xml
-6) اطلب فهرسة الصفحة الرئيسية والصفحات المهمة من URL Inspection.
+Public pages in sitemap:
+- https://elsaeedwinch.com/
+- https://elsaeedwinch.com/about.html
+- https://elsaeedwinch.com/services.html
+- https://elsaeedwinch.com/contact.html
+
+Excluded from indexing:
+- privacy-policy.html
+- thank-you.html
+
+Technical setup:
+- Canonical URLs use the apex domain (https://elsaeedwinch.com).
+- robots.txt points to the sitemap.
+- sitemap.xml includes only public pages.
+- Open Graph / Twitter metadata added.
+- AutomotiveBusiness structured data added to the homepage.
+- Placeholder text and generic image alt text cleaned up.
+
+After deployment:
+1. Verify https://elsaeedwinch.com/ works.
+2. In Google Search Console, keep https://elsaeedwinch.com/sitemap.xml submitted.
+3. Inspect https://elsaeedwinch.com/ and request indexing after the new deployment is live.
+4. Do not submit individual HTML pages as sitemaps.

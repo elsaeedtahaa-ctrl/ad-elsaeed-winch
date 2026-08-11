@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /thank-you.html
-Disallow: /privacy-policy.html
 
 Sitemap: https://elsaeedwinch.com/sitemap.xml
