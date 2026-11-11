@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+# Ignore uncompressed raw 80MB+ camera/whatsapp dumps to keep git push lightweight
+assets/videos/*7.53.37*.mp4
