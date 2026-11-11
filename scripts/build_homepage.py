@@ -1,0 +1,543 @@
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from build_elsaeed_helpers import (
+    BASE_DIR, DOMAIN, PHONE, PHONE_FORMATTED, PHONE_DISPLAY, WHATSAPP_LINK, EMAIL,
+    BRAND_NAME, BRAND_FULL, GTM_ID, get_footer
+)
+
+def build_homepage():
+    canonical_url = f"{DOMAIN}/"
+    
+    html = f"""<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+  new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  }})(window,document,'script','dataLayer','{GTM_ID}');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>أسرع ونش إنقاذ سيارات في مصر 24 ساعة | {BRAND_NAME}</title>
+  <meta name="description" content="أسرع ونش إنقاذ سيارات وسحب ونقل المركبات 24 ساعة في القاهرة والجيزة وكافة الطرق والمحاور السريعة بأفضل سعر عادل. فريق محترف يصلك في 15 دقيقة. اتصل الآن {PHONE_DISPLAY}.">
+  <meta name="keywords" content="ونش انقاذ, ونش انقاذ سيارات, ونش سيارات, ونش انقاذ سريع, ونش انقاذ القاهرة, ونش انقاذ الجيزة, ونش انقاذ التجمع, ونش انقاذ اكتوبر, ونش انقاذ الدائري, رقم ونش انقاذ, ارخص ونش انقاذ, ونش السعيد">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="{canonical_url}">
+
+  <!-- Google Search Console Verification Meta -->
+  <meta name="google-site-verification" content="google030edcd31c1fc51e">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{canonical_url}">
+  <meta property="og:title" content="أسرع ونش إنقاذ سيارات في مصر 24 ساعة | {BRAND_NAME}">
+  <meta property="og:description" content="خدمة ونش إنقاذ وسحب ونقل السيارات على مدار الساعة بسرعة وأمان في جميع المحافظات والطرق السريعة. نصلك في 15 دقيقة. اتصل الآن {PHONE_DISPLAY}.">
+  <meta property="og:image" content="{DOMAIN}/assets/images/winch-og-banner.webp">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:site_name" content="{BRAND_NAME}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="{canonical_url}">
+  <meta name="twitter:title" content="أسرع ونش إنقاذ سيارات في مصر 24 ساعة | {BRAND_NAME}">
+  <meta name="twitter:description" content="أسرع ونش إنقاذ سيارات في مصر. متواجدون 24 ساعة على الطرق السريعة والمحاور الرئيسية. اتصل بنا الآن.">
+  <meta name="twitter:image" content="{DOMAIN}/assets/images/winch-og-banner.webp">
+
+  <meta name="theme-color" content="#0a1628">
+  <meta name="msapplication-navbutton-color" content="#0a1628">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0a1628">
+
+  <!-- Sub-2.0s Responsive LCP Preload (WebP Optimized) -->
+  <link rel="preload" as="image" href="assets/images/hero-bg-mobile.webp" media="(max-width: 640px)" fetchpriority="high" type="image/webp">
+  <link rel="preload" as="image" href="assets/images/hero-bg-pro.webp" media="(min-width: 641px)" fetchpriority="high" type="image/webp">
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+
+  <style>
+    /* Responsive Hero Background */
+    .hero {{
+      background-image: url('assets/images/hero-bg-pro.webp');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }}
+    @media (max-width: 640px) {{
+      .hero {{
+        background-image: url('assets/images/hero-bg-mobile.webp');
+      }}
+    }}
+  </style>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@graph": [
+      {{
+        "@type": "WebSite",
+        "@id": "{DOMAIN}/#website",
+        "url": "{DOMAIN}/",
+        "name": "{BRAND_NAME}",
+        "inLanguage": "ar-EG"
+      }},
+      {{
+        "@type": "AutoTowingService",
+        "@id": "{DOMAIN}/#service",
+        "name": "{BRAND_NAME} - أسرع ونش إنقاذ سيارات",
+        "url": "{DOMAIN}/",
+        "telephone": "+201041316499",
+        "email": "{EMAIL}",
+        "description": "أسرع ونش إنقاذ وسحب ونقل سيارات في مصر على مدار 24 ساعة. نصلك خلال 15 دقيقة بأحدث المعدات الهيدروليكية.",
+        "image": "{DOMAIN}/assets/images/winch-og-banner.webp",
+        "priceRange": "$$",
+        "openingHoursSpecification": {{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }},
+        "areaServed": [
+          {{"@type": "City", "name": "Cairo"}},
+          {{"@type": "City", "name": "Giza"}},
+          {{"@type": "City", "name": "New Cairo"}},
+          {{"@type": "City", "name": "6th of October"}},
+          {{"@type": "City", "name": "Sheikh Zayed"}},
+          {{"@type": "AdministrativeArea", "name": "الطريق الدائري ومحور 26 يوليو"}},
+          {{"@type": "AdministrativeArea", "name": "طريق مصر إسكندرية الصحراوي وطريق السويس"}}
+        ],
+        "serviceType": [
+          "ونش إنقاذ سيارات",
+          "سحب السيارات المعطلة",
+          "إنقاذ الحوادث",
+          "نقل سيارات VIP",
+          "مساعدة طوارئ الطرق السريعة"
+        ]
+      }},
+      {{
+        "@type": "FAQPage",
+        "mainEntity": [
+          {{
+            "@type": "Question",
+            "name": "ما هو رقم ونش إنقاذ سيارات السعيد المباشر؟",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "يمكنك التواصل فوراً مع ونش إنقاذ السعيد على مدار 24 ساعة عبر الرقم 01041316499 أو عبر الواتساب ويصلك الونش خلال 15 دقيقة."
+            }}
+          }},
+          {{
+            "@type": "Question",
+            "name": "كم يستغرق وصول ونش الإنقاذ إلي؟",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "بفضل انتشار أسطولنا وتمركزه الدائم في كافة محاور القاهرة والجيزة، نصلك في مدة تتراوح بين 10 إلى 20 دقيقة كحد أقصى."
+            }}
+          }},
+          {{
+            "@type": "Question",
+            "name": "هل أسعار ونش إنقاذ السعيد عادلة وبدون إكراميات؟",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "نعم، أسعارنا عادلة وشفافة ومحددة مسبقاً قبل تحرك الونش بدون أي مصاريف خفية أو إكراميات إجبارية للسائقين."
+            }}
+          }}
+        ]
+      }}
+    ]
+  }}
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Unified Sticky Site Header (Zero Collision) -->
+  <header class="site-header" id="siteHeader">
+    <div class="top-announcement-bar">
+      <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px;">
+        <span>⚡ أسرع ونش إنقاذ سيارات في مصر — نصلك خلال 15 دقيقة</span>
+        <span style="color: #00b4d8;">|</span>
+        <span>خدمة 24 ساعة طوال أيام الأسبوع</span>
+        <span style="color: #00b4d8;">|</span>
+        <span>طوارئ: <a href="tel:{PHONE}" style="color: #f0b429; text-decoration: none; font-weight: 800;"><span dir="ltr">{PHONE}</span></a></span>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a class="nav-logo" href="index.html">
+          <span class="logo-icon">🛻</span>
+          <span class="logo-text">{BRAND_NAME}</span>
+        </a>
+        <div class="nav-menu" id="navMenu">
+          <a class="nav-link active" href="index.html">الرئيسية</a>
+          <a class="nav-link" href="services.html">الخدمات</a>
+          <a class="nav-link" href="coverage.html">مناطق التغطية</a>
+          <a class="nav-link" href="pricing.html">دليل الأسعار</a>
+          <a class="nav-link" href="blog/index.html">مقالات الإنقاذ</a>
+          <a class="nav-link" href="about.html">من نحن</a>
+          <a class="nav-link" href="contact.html">اتصل بنا</a>
+        </div>
+        <a class="nav-cta" href="tel:{PHONE}">
+          <span>📞</span> <span dir="ltr">{PHONE}</span>
+        </a>
+        <button aria-label="القائمة" class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">⚡ أسرع ونش إنقاذ سيارات في مصر — خدمة 24 ساعة</div>
+      <h1 class="hero-title">
+        أسرع <span class="gold">ونش إنقاذ سيارات</span> في مصر<br/>
+        خدمة سحب ونقل <span class="gold">24 ساعة</span>
+      </h1>
+      <p class="hero-desc">
+        تعطلت سيارتك في الطريق؟ لا تقلق! أسرع ونش إنقاذ مجهز يصلك خلال 15 دقيقة أينما كنت في القاهرة، الجيزة وكافة المحاور والطرق السريعة — أمان تام، سرعة استجابة، وأفضل سعر عادل.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-gold" href="tel:{PHONE}" style="font-weight: 800; gap: 10px; font-size: 17px; padding: 14px 28px;">
+          <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+          <span dir="ltr">{PHONE}</span>
+        </a>
+        <a class="btn btn-whatsapp" href="{WHATSAPP_LINK}" style="font-weight: 800; gap: 10px; font-size: 17px; padding: 14px 28px;" target="_blank" rel="noopener noreferrer">
+          <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.654-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+          واتساب <span dir="ltr">{PHONE}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="hero-stats">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-num">15+ دقيقة</span>
+          <span class="stat-label">متوسط سرعة الوصول</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">خدمة مستمرة بلا توقف</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">أمان وتثبيت محكم</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">0%</span>
+          <span class="stat-label">بدون إكراميات إجبارية</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Real Video Evidence & Watch Pages Section -->
+  <section class="section" style="background: var(--primary-light); padding: 50px 0;">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 36px;">
+        <span class="section-label">🎥 توثيق بالفيديو من أرض الواقع</span>
+        <h2 class="section-title">شاهد احترافية وسرعة أوناش السعيد بالفيديو</h2>
+        <p class="section-desc">نوثق بالفيديو جانباً من عمليات الإنقاذ والسحب الميدانية والفيديو التعريفي الرسمي لأسطولنا.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <!-- Video 1: Official AI Promo -->
+        <div class="glass-card" style="border-radius: 16px; overflow: hidden; background: #000; border: 1px solid rgba(0, 180, 216, 0.4); box-shadow: 0 10px 25px rgba(0, 180, 216, 0.15);">
+          <div style="position: relative;">
+            <video controls preload="none" poster="assets/images/poster_elsaeed_ai_promo.webp" style="width: 100%; max-height: 260px; display: block; object-fit: cover;">
+              <source src="assets/videos/winch-elsaeed-ai-promo.mp4" type="video/mp4"/>
+            </video>
+            <span style="position: absolute; top: 12px; right: 12px; background: #00b4d8; color: #071322; font-weight: 800; font-size: 11px; padding: 4px 10px; border-radius: 20px;">🎬 فيديو تعريفي رسمي</span>
+          </div>
+          <div style="padding: 20px;">
+            <h3 style="color: #ffffff; font-size: 18px; margin-bottom: 10px;">أسطول وإمكانيات ونش السعيد</h3>
+            <p style="color: #94a3b8; font-size: 14px; margin-bottom: 14px;">فيديو تعريفي شامل يوضح جاهزية أسطول ونش السعيد وتغطيته لجميع محاور وطرق مصر 24 ساعة.</p>
+            <a href="videos/winch-elsaeed-ai-promo.html" style="color: #f0b429; font-weight: 700; font-size: 14px; text-decoration: none;">مشاهدة صفحة التوثيق الكاملة ←</a>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="glass-card" style="border-radius: 16px; overflow: hidden; background: #000; border: 1px solid var(--glass-border);">
+          <video controls preload="none" poster="assets/images/poster_elsaeed_action.webp" style="width: 100%; max-height: 260px; display: block; object-fit: cover;">
+            <source src="assets/videos/202607211016.mp4" type="video/mp4"/>
+          </video>
+          <div style="padding: 20px;">
+            <h3 style="color: #ffffff; font-size: 18px; margin-bottom: 10px;">سحب ورفع هيدروليكي احترافي</h3>
+            <p style="color: #94a3b8; font-size: 14px; margin-bottom: 14px;">توثيق عملي لرفع ونقل سيارة بأحدث ونش إنقاذ هيدروليكي مجهز بدون خدش واحد.</p>
+            <a href="videos/winch-elsaeed-towing-action.html" style="color: #f0b429; font-weight: 700; font-size: 14px; text-decoration: none;">مشاهدة صفحة التوثيق الكاملة ←</a>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="glass-card" style="border-radius: 16px; overflow: hidden; background: #000; border: 1px solid var(--glass-border);">
+          <video controls preload="none" poster="assets/images/poster_elsaeed_highway.webp" style="width: 100%; max-height: 260px; display: block; object-fit: cover;">
+            <source src="assets/videos/WhatsApp%20Video%202026-07-21%20at%209.56.58%20AM.mp4" type="video/mp4"/>
+          </video>
+          <div style="padding: 20px;">
+            <h3 style="color: #ffffff; font-size: 18px; margin-bottom: 10px;">إنقاذ على الطريق السريع</h3>
+            <p style="color: #94a3b8; font-size: 14px; margin-bottom: 14px;">عملية تأمين وسحب سيارة معطلة على الطريق السريع بأعلى معايير السلامة المرورية.</p>
+            <a href="videos/winch-elsaeed-highway-rescue.html" style="color: #f0b429; font-weight: 700; font-size: 14px; text-decoration: none;">مشاهدة صفحة التوثيق الكاملة ←</a>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="glass-card" style="border-radius: 16px; overflow: hidden; background: #000; border: 1px solid var(--glass-border);">
+          <video controls preload="none" poster="assets/images/poster_elsaeed_dispatch.webp" style="width: 100%; max-height: 260px; display: block; object-fit: cover;">
+            <source src="assets/videos/WhatsApp%20Video%202026-07-21%20at%209.56.58%20AM%20(1).mp4" type="video/mp4"/>
+          </video>
+          <div style="padding: 20px;">
+            <h3 style="color: #ffffff; font-size: 18px; margin-bottom: 10px;">انطلاق فوري لنجدة سيارة</h3>
+            <p style="color: #94a3b8; font-size: 14px; margin-bottom: 14px;">سرعة استجابة وانطلاق الأوناش فور الاتصال للوصول للعميل خلال 15 دقيقة.</p>
+            <a href="videos/winch-elsaeed-rapid-dispatch.html" style="color: #f0b429; font-weight: 700; font-size: 14px; text-decoration: none;">مشاهدة صفحة التوثيق الكاملة ←</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview with Photos -->
+  <section class="section bg-dots" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">🔧 خدماتنا</span>
+        <h2 class="section-title">خدمات <span class="gradient">إنقاذ شاملة</span> لسيارتك</h2>
+        <p class="section-desc">نوفر لك كل ما تحتاجه على الطريق — من سحب السيارات إلى المساعدة الفنية الفورية.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="glass-card service-card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/winch-luxury-car-flatbed.webp" alt="سحب سيارات الملاكي" style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <h3>سحب سيارات الملاكي</h3>
+            <p>سحب آمن لكافة أنواع السيارات بأحدث الأوناش الهيدروليكية وبدون أي خدوش أو أضرار في الهيكل.</p>
+          </div>
+        </div>
+
+        <div class="glass-card service-card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/winch-highway-patrol.webp" alt="إنقاذ الطرق السريعة" style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <h3>إنقاذ الطرق السريعة</h3>
+            <p>تغطية فورية للطريق الدائري، طريق السويس، والإسكندرية الصحراوي مع تأمين حركة المرور.</p>
+          </div>
+        </div>
+
+        <div class="glass-card service-card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/winch-night-supercar.webp" alt="خدمة السيارات الفارهة" style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <h3>خدمة السيارات الفارهة (VIP)</h3>
+            <p>أوناش نزول كامل للأرض لحماية سياراتك الفاخرة والرياضية ذات الخلوص الأرضي المنخفض.</p>
+          </div>
+        </div>
+
+        <div class="glass-card service-card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/winch-red-truck-patrol.webp" alt="سحب سيارات الحوادث" style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <h3>سحب سيارات الحوادث</h3>
+            <p>معدات متطورة وسلاسل فولاذية لسحب ونقل السيارات المتضررة من الحوادث بكفاءة وأمان.</p>
+          </div>
+        </div>
+
+        <div class="glass-card service-card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/winch-caterpillar-loader.webp" alt="نقل المعدات الثقيلة" style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <h3>أوناش للمعدات الثقيلة</h3>
+            <p>روافع متعددة المحاور لنقل اللودرات والمعدات الزراعية والصناعية وسيارات البضائع بأمان.</p>
+          </div>
+        </div>
+
+        <div class="glass-card service-card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/winch-porsche-highway.webp" alt="نقل المحافظات" style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <h3>نقل المحافظات</h3>
+            <p>نقل السيارات بين القاهرة وكافة محافظات مصر بأسعار مخفضة وخصومات حقيقية للمسافات الطويلة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rich Vivid Photo Gallery (8 Real High-Quality Photos) -->
+  <section class="section bg-alt" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">📸 معرض الصور الحي</span>
+        <h2 class="section-title">أحدث أوناشنا أثناء العمل الميداني</h2>
+        <p class="section-desc">صور حية من عمليات سحب وتأمين السيارات ومعدات الإنقاذ على مختلف الطرق والمحاور.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 18px;">
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+          <img src="assets/images/winch-luxury-car-flatbed.webp" alt="نقل وتأمين سيارات حديثة على ظهر الونش" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; transition: transform 0.4s ease;">
+          <div style="background: rgba(10, 22, 40, 0.9); padding: 10px 14px; font-size: 13px; color: #cbd5e1;">🚗 نقل وتأمين سيارات حديثة بأمان تام</div>
+        </div>
+
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+          <img src="assets/images/winch-highway-patrol.webp" alt="دورية ونش إنقاذ على الطريق السريع" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; transition: transform 0.4s ease;">
+          <div style="background: rgba(10, 22, 40, 0.9); padding: 10px 14px; font-size: 13px; color: #cbd5e1;">🛣️ دورية ونش متأهبة على الطرق السريعة</div>
+        </div>
+
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+          <img src="assets/images/winch-night-supercar.webp" alt="إنقاذ ونقل سيارة رياضية ليلاً" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; transition: transform 0.4s ease;">
+          <div style="background: rgba(10, 22, 40, 0.9); padding: 10px 14px; font-size: 13px; color: #cbd5e1;">🌙 طوارئ ليلية 24 ساعة للسيارات الفارهة</div>
+        </div>
+
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+          <img src="assets/images/winch-porsche-towing.webp" alt="سحب وتثبيت سيارات بورش" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; transition: transform 0.4s ease;">
+          <div style="background: rgba(10, 22, 40, 0.9); padding: 10px 14px; font-size: 13px; color: #cbd5e1;">⚡ رفع هيدروليكي فائق العناية والحرفية</div>
+        </div>
+
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+          <img src="assets/images/winch-caterpillar-loader.webp" alt="تحميل ونقل لودر ومعدات ثقيلة" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; transition: transform 0.4s ease;">
+          <div style="background: rgba(10, 22, 40, 0.9); padding: 10px 14px; font-size: 13px; color: #cbd5e1;">🚜 نقل وتحميل لودرات ومعدات ثقيلة</div>
+        </div>
+
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+          <img src="assets/images/winch-red-truck-patrol.webp" alt="شاحنة ونش إنقاذ هيدروليكي متطورة" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; transition: transform 0.4s ease;">
+          <div style="background: rgba(10, 22, 40, 0.9); padding: 10px 14px; font-size: 13px; color: #cbd5e1;">🔴 رافعات مجهزة بأحدث سلاسل الشد</div>
+        </div>
+
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+          <img src="assets/images/winch-cupra-safe-loading.webp" alt="تثبيت الإطارات بأحزمة ناعمة" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; transition: transform 0.4s ease;">
+          <div style="background: rgba(10, 22, 40, 0.9); padding: 10px 14px; font-size: 13px; color: #cbd5e1;">🔒 أحزمة ربط خاصة لحماية الجنوط والعفشة</div>
+        </div>
+
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow);">
+          <img src="assets/images/winch-team-hero.webp" alt="فريق عمل وكباتن ونش السعيد" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; transition: transform 0.4s ease;">
+          <div style="background: rgba(10, 22, 40, 0.9); padding: 10px 14px; font-size: 13px; color: #cbd5e1;">👷 فريق مدرب على أعلى معايير السلامة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hyperlocal Coverage Areas -->
+  <section class="section bg-dots" id="areas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">📍 مناطق التغطية</span>
+        <h2 class="section-title">أقرب ونش إنقاذ إليك أينما كنت</h2>
+        <p class="section-desc">أوناشنا متمركزة بالقرب من أهم محاور القاهرة والجيزة لنصلك في دقائق معدودة.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+        <a href="blog/winch-daeri-cairo.html" class="glass-card" style="padding: 20px; text-decoration: none; display: block; border-radius: 12px;">
+          <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 6px;">📍 الطريق الدائري ومحور 26 يوليو</h3>
+          <p style="color: #94a3b8; font-size: 13px; margin: 0;">تمركزات دائمة عند مطلع المنيب، المريوطية، والوراق.</p>
+        </a>
+
+        <a href="blog/winch-tagamoa-new-cairo.html" class="glass-card" style="padding: 20px; text-decoration: none; display: block; border-radius: 12px;">
+          <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 6px;">📍 التجمع الخامس والقاهرة الجديدة</h3>
+          <p style="color: #94a3b8; font-size: 13px; margin: 0;">تغطية شارع التسعين، اللوتس، النرجس، والرحاب.</p>
+        </a>
+
+        <a href="blog/winch-sheikh-zayed-6-october.html" class="glass-card" style="padding: 20px; text-decoration: none; display: block; border-radius: 12px;">
+          <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 6px;">📍 الشيخ زايد و6 أكتوبر</h3>
+          <p style="color: #94a3b8; font-size: 13px; margin: 0;">تغطية وصلة دهشور، طريق الواحات، والمحور المركزي.</p>
+        </a>
+
+        <a href="blog/winch-nasr-city.html" class="glass-card" style="padding: 20px; text-decoration: none; display: block; border-radius: 12px;">
+          <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 6px;">📍 مدينة نصر ومحور المشير</h3>
+          <p style="color: #94a3b8; font-size: 13px; margin: 0;">تغطية عباس العقاد، مكرم عبيد، وطريق النصر.</p>
+        </a>
+
+        <a href="blog/winch-heliopolis-masr-gedida.html" class="glass-card" style="padding: 20px; text-decoration: none; display: block; border-radius: 12px;">
+          <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 6px;">📍 مصر الجديدة وروكسي والمطار</h3>
+          <p style="color: #94a3b8; font-size: 13px; margin: 0;">تغطية الكوربة، صلاح سالم، وطريق المطار.</p>
+        </a>
+
+        <a href="blog/winch-maadi.html" class="glass-card" style="padding: 20px; text-decoration: none; display: block; border-radius: 12px;">
+          <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 6px;">📍 المعادي وأوتوستراد المعادي</h3>
+          <p style="color: #94a3b8; font-size: 13px; margin: 0;">تغطية دجلة، ثكنات المعادي، والكورنيش.</p>
+        </a>
+
+        <a href="blog/winch-suez-road.html" class="glass-card" style="padding: 20px; text-decoration: none; display: block; border-radius: 12px;">
+          <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 6px;">📍 طريق السويس الصحراوي</h3>
+          <p style="color: #94a3b8; font-size: 13px; margin: 0;">تأمين الشروق، مدينتي، بدر، وحتى بوابات الرسوم.</p>
+        </a>
+
+        <a href="blog/winch-alex-desert-road.html" class="glass-card" style="padding: 20px; text-decoration: none; display: block; border-radius: 12px;">
+          <h3 style="color: #ffffff; font-size: 17px; margin-bottom: 6px;">📍 طريق مصر إسكندرية الصحراوي</h3>
+          <p style="color: #94a3b8; font-size: 13px; margin: 0;">تغطية البوابات، السليمانية، ومحور الضبعة.</p>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="coverage.html" style="color: #f0b429; font-weight: 800; font-size: 16px; text-decoration: none;">
+          عرض كافة مناطق التغطية المصورة بالتفصيل (15+ منطقة) ←
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">❓ الأسئلة الشائعة</span>
+        <h2 class="section-title">إجابات على أكثر الأسئلة شيوعاً</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="background: rgba(15, 31, 53, 0.7); border: 1px solid rgba(0, 180, 216, 0.2); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+          <h3 style="color: #f0b429; font-size: 18px; margin-bottom: 8px;">ما هو رقم ونش إنقاذ سيارات السعيد؟</h3>
+          <p style="color: #cbd5e1; font-size: 15px; margin: 0; line-height: 1.7;">يمكنك الاتصال المباشر على الرقم <a href="tel:{PHONE}" style="color: #f0b429; font-weight: 700;"><span dir="ltr">{PHONE}</span></a> على مدار 24 ساعة يومياً أو مراسلتنا عبر الواتساب.</p>
+        </div>
+
+        <div style="background: rgba(15, 31, 53, 0.7); border: 1px solid rgba(0, 180, 216, 0.2); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+          <h3 style="color: #f0b429; font-size: 18px; margin-bottom: 8px;">كم يستغرق وصول الونش إلي؟</h3>
+          <p style="color: #cbd5e1; font-size: 15px; margin: 0; line-height: 1.7;">نصلك في مدة تتراوح بين 10 إلى 20 دقيقة كحد أقصى بفضل توزيع أسطولنا الدائم عند المداخل والمخارج الرئيسية.</p>
+        </div>
+
+        <div style="background: rgba(15, 31, 53, 0.7); border: 1px solid rgba(0, 180, 216, 0.2); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+          <h3 style="color: #f0b429; font-size: 18px; margin-bottom: 8px;">هل أسعاركم تشمل أي إكراميات إجبارية؟</h3>
+          <p style="color: #cbd5e1; font-size: 15px; margin: 0; line-height: 1.7;">إطلاقاً، أسعارنا عادلة وشفافة والسعر المتفق عليه عبر الهاتف هو السعر الإجمالي النهائي، ولا يطلب السائق أي إكراميات إضافية.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Call to Action Section -->
+  <section class="section" style="background: linear-gradient(135deg, #0a1628, #152a45); border-top: 1px solid rgba(0, 180, 216, 0.2); padding: 60px 0;">
+    <div class="container" style="text-align: center;">
+      <h2 style="font-size: clamp(24px, 4vw, 36px); font-weight: 900; color: #ffffff; margin-bottom: 16px;">
+        سيارتك معطلة في الطريق؟ اتصل بـ <span style="color: #f0b429;">ونش السعيد</span> الآن
+      </h2>
+      <p style="color: #94a3b8; font-size: 17px; max-width: 650px; margin: 0 auto 30px;">
+        نصلك أينما كنت خلال 15 دقيقة بأحدث الرافعات الهيدروليكية وبأفضل سعر عادل وبدون أي إكراميات إجبارية.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="tel:{PHONE}" class="btn btn-gold" style="font-weight: 800; font-size: 18px; padding: 16px 36px; text-decoration: none; border-radius: 8px;">
+          📞 اتصل فوراً: <span dir="ltr">{PHONE}</span>
+        </a>
+        <a href="{WHATSAPP_LINK}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="font-weight: 800; font-size: 18px; padding: 16px 36px; text-decoration: none; border-radius: 8px;">
+          💬 طلب ونش عبر واتساب
+        </a>
+      </div>
+    </div>
+  </section>
+
+{get_footer(is_subfolder=False)}
+"""
+    with open(os.path.join(BASE_DIR, "index.html"), "w", encoding="utf-8") as f:
+        f.write(html)
+    print("Updated: index.html with original video paths and vivid gallery!")
+
+if __name__ == "__main__":
+    build_homepage()
