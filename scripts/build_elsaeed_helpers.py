@@ -1,7 +1,7 @@
 import os
 import json
 
-BASE_DIR = r"E:\عبدالسلام\فولدر الاعلانات\elsaeedwinch-seo-final-v3-GTM\elsaeedwinch-seo-final-v3"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BLOG_DIR = os.path.join(BASE_DIR, "blog")
 VIDEOS_DIR = os.path.join(BASE_DIR, "videos")
 os.makedirs(BLOG_DIR, exist_ok=True)
@@ -192,6 +192,35 @@ def get_footer(is_subfolder=False):
         <div class="footer-contact-item">
           <span>⚡</span> <span>سرعة وصول قياسية: 15 - 20 دقيقة</span>
         </div>
+      </div>
+    </div>
+
+    <!-- All Locations SEO Sitemap Grid -->
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+      <h4 style="color: #f0b429; font-size: 14px; margin-bottom: 12px; font-weight: 700;">دليل خدمات ونش الإنقاذ في كافة المدن والمحاور:</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 12px; color: #94a3b8;">
+        <a href="{p}blog/winch-tagamoa-new-cairo.html" style="color: #cbd5e1; text-decoration: none;">ونش التجمع الخامس</a> •
+        <a href="{p}blog/winch-suez-road.html" style="color: #cbd5e1; text-decoration: none;">ونش طريق السويس</a> •
+        <a href="{p}blog/winch-shorouk-badr.html" style="color: #cbd5e1; text-decoration: none;">ونش الشروق وبدر</a> •
+        <a href="{p}blog/winch-new-capital.html" style="color: #cbd5e1; text-decoration: none;">ونش العاصمة الإدارية</a> •
+        <a href="{p}blog/winch-rehab-madinaty.html" style="color: #cbd5e1; text-decoration: none;">ونش الرحاب ومدينتي</a> •
+        <a href="{p}blog/winch-sheikh-zayed-6-october.html" style="color: #cbd5e1; text-decoration: none;">ونش الشيخ زايد و6 أكتوبر</a> •
+        <a href="{p}blog/winch-nasr-city.html" style="color: #cbd5e1; text-decoration: none;">ونش مدينة نصر</a> •
+        <a href="{p}blog/winch-heliopolis-masr-gedida.html" style="color: #cbd5e1; text-decoration: none;">ونش مصر الجديدة</a> •
+        <a href="{p}blog/winch-maadi.html" style="color: #cbd5e1; text-decoration: none;">ونش المعادي</a> •
+        <a href="{p}blog/winch-mokattam.html" style="color: #cbd5e1; text-decoration: none;">ونش المقطم والهضبة</a> •
+        <a href="{p}blog/winch-giza-haram.html" style="color: #cbd5e1; text-decoration: none;">ونش الجيزة والهرم وفيصل</a> •
+        <a href="{p}blog/winch-alex-desert-road.html" style="color: #cbd5e1; text-decoration: none;">ونش طريق إسكندرية الصحراوي</a> •
+        <a href="{p}blog/winch-daeri-cairo.html" style="color: #cbd5e1; text-decoration: none;">ونش الطريق الدائري</a> •
+        <a href="{p}blog/winch-downtown-cairo.html" style="color: #cbd5e1; text-decoration: none;">ونش وسط البلد والزمالك</a> •
+        <a href="{p}blog/winch-shobra.html" style="color: #cbd5e1; text-decoration: none;">ونش شبرا ومظلات</a> •
+        <a href="{p}blog/winch-obour-city.html" style="color: #cbd5e1; text-decoration: none;">ونش مدينة العبور</a> •
+        <a href="{p}blog/winch-salam-herfeyein-nahda.html" style="color: #cbd5e1; text-decoration: none;">ونش السلام والحرفيين</a> •
+        <a href="{p}blog/winch-enqaz-cairo.html" style="color: #cbd5e1; text-decoration: none;">ونش إنقاذ القاهرة الكبرى</a> •
+        <a href="{p}blog/agrab-winch-qarib-meni.html" style="color: #cbd5e1; text-decoration: none;">أقرب ونش سيارات قريب مني</a> •
+        <a href="{p}blog/ar5as-winch-enqaz-misr.html" style="color: #cbd5e1; text-decoration: none;">أرخص ونش إنقاذ في مصر</a> •
+        <a href="{p}blog/winch-offers-discounts-cairo.html" style="color: #cbd5e1; text-decoration: none;">عروض وأسعار الأوناش</a> •
+        <a href="{p}blog/emergency-breakdown-tips.html" style="color: #cbd5e1; text-decoration: none;">نصائح أعطال الطرق السريعة</a>
       </div>
     </div>
 
